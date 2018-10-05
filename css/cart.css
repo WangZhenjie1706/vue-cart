@@ -1,0 +1,16 @@
+.goods_img{
+    width:5%;
+    height:5%;
+}
+ol li{
+    margin-bottom:15px;
+}
+.number{
+    color:red;
+}
+.myinput{
+    width:30px;
+}
+ol{
+    list-style-type: none;
+}

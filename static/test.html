@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link href="../css/cart.css" rel="stylesheet"  type="text/css" />
+</head>
+<body>
+<div id="app">
+    <h3>{{message}}</h3>
+    <hr/>
+    <ol>
+        <li v-for="item in itemList">
+            <input type="checkbox" v-model="item.checked" @click="selectOne(item)"/>　　
+            图标：<img class="goods_img" v-bind:src="item.itemImage" />　　　
+            名称：<span v-text="item.itemName"></span>　　　
+            单价：<span class="number">{{item.itemPrice | filterMoney}}</span>　　　
+            数量：<button v-on:click="item.itemCount-=1">-</button>
+            <input class="myinput" type="text" value="0" v-model="item.itemCount" />
+            <button @click="item.itemCount+=1">+</button>　　　
+            合计：<span class="number">{{item.itemPrice*item.itemCount | filterMoney}}</span>　　
+            <button>删除</button>
+        </li>
+    </ol>
+    <hr/>
+    　　<input type="checkbox" v-model="selectAllFlag" @click="selectAll(true)" />　全选　　　
+        <button>　取消全选　</button>　　
+        <button>　批量删除　</button>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+        总费用:<span class="number"></span>　　　
+        <button>　　结算　　</button>
+</div>
+<script src="../node_modules/vue/dist/vue.min.js"></script>
+<script src="../node_modules/vue-resource/dist/vue-resource.min.js"></script>
+<script src="../js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+    "titleCart": "购物车",
+    "message": "购物车列表",
+    "itemList":[
+        {
+            "itemName":"黄鹤楼",
+            "itemImage":"../images/1.png",
+            "itemPrice":20,
+            "itemCount":2,
+            "totalPrice":40
+        },{
+            "itemName":"中华",
+            "itemImage":"../images/2.png",
+            "itemPrice":21,
+            "itemCount":2,
+            "totalPrice":42
+        },{
+            "itemName":"娇子",
+            "itemImage":"../images/1.png",
+            "itemPrice":22,
+            "itemCount":2,
+            "totalPrice":44
+        }
+    ]
+
+}
